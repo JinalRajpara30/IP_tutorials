@@ -1,94 +1,85 @@
 <html>
     <head>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> registration </title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
+        <script>
+          $(document).ready(function(){
+              $("#form").validate(
+                  {
+                      rules:{
+                          'name':{
+                              required:true,
+                          }
+                      },
+                      message:{
+                          'name':{
+                              required:"field"
+                          }
+  
+                      }
+                  
+                  }
+              )
+  
+          });
+      </script>
+      </head>
 <body>
     <div class="container">
         <div class="p-5 mb-4 bg-light text-dark">
             <div class="col-md-4 offset-md-4">
             <h1 class="text-center" >Registration</h1>
-                <form action="#" name="registration" id="registration">
- 
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" placeholder="Name"><br>
- 
-    <label for="username">User Name</label>
-    <input type="text" name="username" id="username" placeholder="email"><br>
- 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" placeholder=""><br>
+                <form name="register" id="form">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="" required><br>
+              
+                  <label for="username">User Name</label>
+                  <input type="text" name="username" id="username" placeholder="" required><br>
+              
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" placeholder="" required><br>
 
-    <label for="password">Re-password</label>
-    <input type="password" name="password" id="repassword" placeholder=""><br>
+                  <label for="repassword">Re-password</label>
+                  <input type="repassword" name="repassword" id="repassword" placeholder="" required><br>
 
-    <label for="age">Age</label>
-    <input type="text" name="age" id="age"><br>
+                  <label for="age">Age</label>
+                  <input type="text" name="age" id="age" required><br>
 
-    <label for="birth_date">Birthdate</label>
-    <input type="text" name="birth_date" id="birth_date"><br>
- 
-    <label for="country">Country</label>
-    <input type="text" name="country" id="country" ><br>
+                  <label for="birth_date">Birthdate</label>
+                  <input type="date" name="birth_date" id="birth_date" required><br>
+              
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country" required><br>
 
-    <label for="state">State</label>
-    <input type="text" name="state" id="state"><br>
+                  <label for="state">State</label>
+                  <input type="text" name="state" id="state" required><br>
 
-    <label for="city">City</label>
-    <input type="text" name="city" id="city"><br>
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" required><br>
 
-    <label for="profile_picture">Profile_picture</label>
-    <input type="file" name="profile_picture" id="profile_picture"><br>
+                  <label for="profile_picture">Profile_picture</label>
+                  <input type="file" name="profile_picture" id="profile_picture" required><br>
 
-    <label for="note">Note</label>
-    <input type="text" name="name" id="name"><br>
+                  <label for="note">Note</label>
+                  <input type="text" name="note" id="note"required><br>
 
-    <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                  <input name="submit" type="submit" id="submit" value="Submit">
                 </form>
             </div>
         </div>
     </div>
-    <script>
-$(document).ready(function(){
-  $("#registration").validate({
-    rules: {
-      name: "required",
-      user_name:
-      {
-          required:true,
-      },
-      password: {
-        required: true,
-        minlength: 5
-      },
-      repassword:
-      {
-        required:true,
-        minlength:5
-      },
-      age:
-      {
-          required:true,
-          minlength:3
-      },
-      birth_date:
-      {
-          required:true,
-      },
-      country:"required",
-      state:"required",
-      city:"required",
-      profile_picture:"required",
-      note:"required"
-    },
-  
-  });
-});
-</script>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
 </body>
 </html>
